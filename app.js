@@ -1,9 +1,12 @@
+const h1 = document.querySelector('#h1')
 
 fetch('pessoas.json')
   .then(res => res.json())
   .then(dados => {
     const dadosString = JSON.stringify(dados, null, 2);
     console.log(dadosString);
+
+    h1.innerHTML = dadosString.replace(/"/g, '')
     // Faça o que for necessário com a dadosString aqui
   })
   .catch(erro => {
