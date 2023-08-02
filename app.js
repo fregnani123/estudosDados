@@ -2,7 +2,7 @@
 
 
 function rand(){
- const s = parseInt(Math.random() * 3)
+ const s = parseInt(Math.random() * 3000)
    return s <= 0 ? Number(s + 1) : s 
 }
 
@@ -13,7 +13,7 @@ function simulaPromise(msg,tempo){
         reject('CAI NO ERRO');
         return
      }
-    resolve(msg + " Passei na promisse");
+    resolve(msg + " Passei na promisse<br>" );
     return
 
     },tempo)
@@ -21,10 +21,22 @@ function simulaPromise(msg,tempo){
 
 }
 
+const res = document.querySelector("#h1")
+
 async function executa(){
+  try{  
     const fase1 = await simulaPromise('fase 1', rand());
-    console.log(fase1)
-}
+    res.innerHTML += fase1;
+
+    const fase2 = await simulaPromise('fase 2', rand());
+    res.innerHTML += fase2;;
+
+    const fase3 = await simulaPromise('fase 3', rand());
+    res.innerHTML += fase3;}
+  catch(e) {
+    console.log(e)
+  }
+} 
 executa()
 
 
