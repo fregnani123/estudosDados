@@ -1,0 +1,35 @@
+{
+    "pessoas": [
+      {
+        "nome": "João Silva",
+        "cidade": "São Paulo",
+        "idade": 30,
+        "profissao": "Engenheiro"
+      },
+      {
+        "nome": "Maria Santos",
+        "cidade": "Rio de Janeiro",
+        "idade": 28,
+        "profissao": "Advogada"
+      },
+      {
+        "nome": "Pedro Almeida",
+        "cidade": "Belo Horizonte",
+        "idade": 25,
+        "profissao": "Designer"
+      },
+      {
+        "nome": "Ana Oliveira",
+        "cidade": "Salvador",
+        "idade": 32,
+        "profissao": "Médica"
+      },
+      {
+        "nome": "Carlos Ferreira",
+        "cidade": "Brasília",
+        "idade": 40,
+        "profissao": "Professor"
+      }
+    ]
+  }
+  
