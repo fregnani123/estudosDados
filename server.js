@@ -1,3 +1,4 @@
+const { error } = require('console');
 const express = require('express');
 const app = express();
 const path = require('path');
@@ -7,6 +8,11 @@ app.get("/",(req,res)=>{
     res.send('oi')
 });
 
-app.listen(process.env.PORT,()=>{
-    console.log('servidor rodando')
-});
+try {
+    app.listen(process.env.PORT, () => {
+        console.log('Servidor rodando');
+    });
+} catch (error) {
+    console.error('Erro ao iniciar o servidor:', error);
+    process.exit(1);
+}
