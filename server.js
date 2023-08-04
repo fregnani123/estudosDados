@@ -1,11 +1,13 @@
-const { error } = require('console');
 const express = require('express');
 const app = express();
 const path = require('path');
 require('dotenv').config({path:'variaveis.env'})
 
+app.use(express.static(path.resolve(__dirname,'public')))
+
 app.get("/",(req,res)=>{
-    res.send('oi')
+    res.sendFile(path.join(__dirname,'login.html')
+    )
 });
 
 try {
