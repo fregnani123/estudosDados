@@ -3,10 +3,8 @@ const app = express();
 const path = require('path');
 require('dotenv').config({path:'variaveis.env'})
 
-app.use(express.static(path.resolve(__dirname,'public')))
-
 app.get("/",(req,res)=>{
-    res.sendFile(path.join(__dirname,'login.html')
+    res.sendFile(path.resolve(__dirname,'login.html')
     )
 });
 
