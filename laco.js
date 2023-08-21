@@ -12,12 +12,12 @@ for (let i of pessoas) {
 }
 
 const somaIdades = pessoas.reduce((total, pessoa, index, array) => total + pessoa.idade, 0);
-console.log();
 
 
-// const idades = pessoas.map(pessoas => pessoas);
 
-// console.log(idades)
+const idades = pessoas.map(pessoas => pessoas.idade);
+
+console.log(idades)
 
 // const pessoasFilter = pessoas.filter(pessoa => pessoa.cidade = 'Rio de Janeiro');
 // console.log(pessoasFilter)
